@@ -12,4 +12,7 @@ defmodule MockFetcher do
   def fetch("http://example.com", _opts) do
     {:ok, "User-agent: Hello\nAllow: /hello\nDisallow: /hey"}
   end
+  def fetch("http://example.net:8080", _opts) do
+    {:ok, "User-agent: Hello\nDisallow: /some_path"}
+  end
 end
